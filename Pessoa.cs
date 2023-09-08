@@ -5,12 +5,9 @@ using System.Threading.Tasks;
 
 namespace working_dotnet_reference_values_types
 {
-    public class Pessoa
+    public ref struct Pessoa
     {
-        public Pessoa()
-        {
-        }
-
+        public Pessoa(){}
         public Pessoa(int idade, string nome, string documento)
         {
             Idade = idade;
@@ -21,6 +18,7 @@ namespace working_dotnet_reference_values_types
         public int Idade { get; set; }
         public string Nome { get; set; }
         public string Documento { get; set; }
+        public Endereco EnderecoPessoa { get; set; }
 
         public Pessoa CopyFrom() 
         {
